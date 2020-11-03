@@ -2,7 +2,7 @@ name: release CI
 
 on:
   # Push激活 GNLS 能不能好使了啊？
-  push:
+  # push:
   # 定时激活
   schedule:
     - cron:  '* 1 * * *'
@@ -44,7 +44,6 @@ jobs:
       - run: |
           echo "tVer=${{ steps.tVer.outputs.content }}" >> $GITHUB_ENV
           echo "cVer=${{ steps.cVer.outputs.content }}" >> $GITHUB_ENV
-          echo "${{ steps.cVer.outputs.content }} ?= {{ steps.cVer.outputs.content }}"
 
       - name: push
         if: env.cVer != env.tVer
