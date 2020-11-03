@@ -2,17 +2,16 @@ name: release CI
 
 on:
   # Push激活 GNLS 能不能好使了啊？
-  #push:
+  push:
   # 定时激活
-  #schedule:
-  #  - cron:  '30 * * * *'
+  schedule:
+    - cron:  '* 1 * * *'
       # 每30分钟：'30 * * * *'
       # 每1小时：'* 1 * * *'
       # ！最少5分钟
   # 接受目标仓库的dispatch激活
   repository_dispatch:
     types: [do_archive]
-
 
 jobs:
   transport:
@@ -42,8 +41,13 @@ jobs:
         with:
           path: ./old_version
 
+      - run: |
+          echo "tVer=${{ steps.tVer.outputs.content }}" >> $GITHUB_ENV
+          echo "cVer=${{ steps.cVer.outputs.content }}" >> $GITHUB_ENV
+          echo "${{ steps.cVer.outputs.content }} ?= {{ steps.cVer.outputs.content }}"
+
       - name: push
-        if: ${{ steps.cVer.outputs.content }} != ${{ steps.tVer.outputs.content }}
+        if: env.cVer != env.tVer
         uses: github-actions-x/commit@v2.6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -57,14 +61,14 @@ jobs:
 
       # 等待10s 以防先发布再push
       - name: Sleep for 10 seconds
-        if: ${{ steps.cVer.outputs.content }} != ${{ steps.tVer.outputs.content }}
+        if: env.cVer != env.tVer
         uses: jakejarvis/wait-action@master
         with:
           time: '10s'
 
       # 读取下载地址
       - name: Read DownloadLink
-        if: ${{ steps.cVer.outputs.content }} != ${{ steps.tVer.outputs.content }}
+        if: env.cVer != env.tVer
         id: downloadlink
         uses: juliangruber/read-file-action@v1
         with:
@@ -72,7 +76,7 @@ jobs:
 
       # 运行工具
       - name: Github Release create, update, and upload assets
-        if: ${{ steps.cVer.outputs.content }} != ${{ steps.tVer.outputs.content }}
+        if: env.cVer != env.tVer
         uses: meeDamian/github-release@v2.0.3
         with:
           token:  ${{ secrets.GITHUB_TOKEN }}
