@@ -1,0 +1,33 @@
+{
+  "TargetOwner": "",
+  "TargetRepo": "",
+  "TargetGH": false,
+  "TargetAPI": "https://www.gyan.dev/ffmpeg/builds/release-version",
+  "TargetDLink": "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.7z",
+  "ArchiverOwner": "One-Studio",
+  "ArchiverRepo": "FFmpeg-Win64",
+  "ArchiverGH": true,
+  "ArchiverAPI": "",
+  "ArchiverVersion": "v1.0.0",
+  "Version": "",
+  "VersionList": [],
+  "CheckTime": "",
+  "Format": 1,
+  "CompRatio": 3,
+  "DistPath": "dist",
+  "Filter": [
+    ".zip",
+    ".exe"
+  ],
+  "DeleteFilter": [
+    {
+      "Index": "ffmpeg-release-essentials",
+      "List": [
+        "presets",
+        "doc",
+        "bin/ffprobe.exe",
+        "bin/ffplay.exe"
+      ]
+    }
+  ]
+}
