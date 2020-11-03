@@ -1,7 +1,7 @@
 name: release CI
 
 on:
-  # Push激活
+  # Push激活 GNLS 能不能好使了啊？
   push:
   # 定时激活
   schedule:
