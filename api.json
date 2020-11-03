@@ -1,9 +1,13 @@
 {
-  "Version": "",
-  "VersionList": [],
+  "Version": "4.3.1-2020-10-28",
+  "VersionList": [
+    "4.3.1-2020-10-28"
+  ],
   "ReleaseTime": "",
-  "CheckTime": "",
-  "DownloadLink": [],
+  "CheckTime": "2020-11-03T16:31Z",
+  "DownloadLink": [
+    "https://cdn.jsdelivr.net/gh/One-Studio/FFmpeg-Win64/dist/ffmpeg-release-essentials.7z"
+  ],
   "Format": 1,
   "ReleaseNote": ""
 }
