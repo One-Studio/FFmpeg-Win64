@@ -3,7 +3,7 @@
 从 [Gyan的网站](https://www.gyan.dev/ffmpeg/builds/) 搬运得到，并用 JSdelivr 作为CDN加速，使用工具 [ReleaseDelivr](https://github.com/One-Studio/ReleaseDelivr)
 
 ## 最新FFmpeg下载链接：
-https://cdn.jsdelivr.net/gh/One-Studio/FFmpeg-Win64/dist/ffmpeg-release-essentials.7z
+https://cdn.jsdelivr.net/gh/One-Studio/FFmpeg-Win64@master/dist/ffmpeg-release-essentials.7z
 
 ## 某个版本的下载链接
 通过下面的API接口获取历史版本号，比如 `4.3.1-2020-10-01`，下载链接：
