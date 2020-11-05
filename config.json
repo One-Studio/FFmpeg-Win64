@@ -9,11 +9,12 @@
   "ArchiverGH": true,
   "ArchiverAPI": "",
   "ArchiverVersion": "v1.0.0",
-  "Version": "4.3.1-2020-10-28",
+  "Version": "4.3.1-2020-11-02",
   "VersionList": [
+    "4.3.1-2020-11-02",
     "4.3.1-2020-10-28"
   ],
-  "CheckTime": "2020-11-03T16:31Z",
+  "CheckTime": "2020-11-05T03:41Z",
   "Format": 1,
   "CompRatio": 3,
   "DistPath": "dist",
