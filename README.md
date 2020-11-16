@@ -16,11 +16,11 @@ https://cdn.jsdelivr.net/gh/One-Studio/FFmpeg-Win64@4.3.1-2020-10-01/dist/ffmpeg
 下载链接：https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.7z
 
 ## 本搬运仓库API：
-版本号：https://cdn.jsdelivr.net/gh/One-Studio/FFmpeg-Win64/version
+版本号：https://cdn.jsdelivr.net/gh/One-Studio/FFmpeg-Win64@master/version
 
-下载链接（ `/n` 分割）：https://cdn.jsdelivr.net/gh/One-Studio/FFmpeg-Win64/download_link
+下载链接（ `/n` 分割）：https://cdn.jsdelivr.net/gh/One-Studio/FFmpeg-Win64@master/download_link
 
-API接口 Json格式：https://cdn.jsdelivr.net/gh/One-Studio/FFmpeg-Win64/api.json
+API接口 Json格式：https://cdn.jsdelivr.net/gh/One-Studio/FFmpeg-Win64@master/api.json
 
 | API          | 类型     | 含义                                          |
 | ------------ | -------- | --------------------------------------------- |
